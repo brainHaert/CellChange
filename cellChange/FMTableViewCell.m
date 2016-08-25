@@ -30,12 +30,12 @@
     }
     return self;
 }
--(void)labelText:(NSIndexPath *)indexPath{
-    _label.text = [NSString stringWithFormat:@"%@",indexPath];
+- (void)labelText:(NSIndexPath *)indexPath {
+    _label.text = [NSString stringWithFormat:@"small %zd",indexPath.row];
 }
 
--(void)bigLabelText{
-    _label.text = @"我已经变大了，哈哈";
+- (void)bigLabelText:(NSIndexPath *)indexPath {
+    _label.text = [NSString stringWithFormat:@"grow up %zd",indexPath.row];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

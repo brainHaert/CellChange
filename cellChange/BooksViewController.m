@@ -56,7 +56,7 @@
         cell = [[FMTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     if ([self isSameIndex:indexPath] && _isOpen) {//变大
-        [cell bigLabelText];
+        [cell bigLabelText:indexPath];
     } else {//正常
         [cell labelText:indexPath];
     }

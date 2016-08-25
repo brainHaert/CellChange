@@ -75,7 +75,7 @@ static NSString *const BigCELLID = @"BigcellID";
     if ([self isSameIndex:indexPath] && _isOpen) {//变大
         FMCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BigCELLID forIndexPath:indexPath];
         
-        [cell bigLabelText];
+        [cell bigLabelText:indexPath];
         
         return cell;
     } else {//正常

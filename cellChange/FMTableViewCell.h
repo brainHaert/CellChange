@@ -12,6 +12,6 @@
 
 -(void)labelText:(NSIndexPath *)indexPath;
 
--(void)bigLabelText;
+- (void)bigLabelText:(NSIndexPath *)indexPath;
 
 @end
