@@ -19,7 +19,7 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         
-        _label = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.frame.size.width, self.frame.size.height)];
+        _label = [[UILabel alloc]initWithFrame:self.bounds];
         
         _label.textColor = [UIColor redColor];
         

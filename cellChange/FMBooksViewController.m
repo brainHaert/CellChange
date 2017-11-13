@@ -5,8 +5,8 @@
 //  Created by admin on 15/12/19.
 //  Copyright (c) 2015年 zilong. All rights reserved.
 //
-#define CellHeight 60
-#define seletedCellHeight 180
+#define kCellHeight 60
+#define kSeletedCellHeight 180
 
 #import "FMBooksViewController.h"
 #import "BooksViewController.h"
@@ -93,17 +93,17 @@ static NSString *const BigCELLID = @"BigcellID";
         
         if (_isOpen == YES) {
             
-            return CGSizeMake(self.view.frame.size.width, seletedCellHeight);
+            return CGSizeMake(self.view.frame.size.width, kSeletedCellHeight);
             
         } else {
             
-            return CGSizeMake(self.view.frame.size.width, CellHeight);
+            return CGSizeMake(self.view.frame.size.width, kCellHeight);
             
         }
         
     } else {
         
-        return CGSizeMake(self.view.frame.size.width, CellHeight);
+        return CGSizeMake(self.view.frame.size.width, kCellHeight);
     }
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -127,6 +127,8 @@ static NSString *const BigCELLID = @"BigcellID";
     
     
     [_collectionView reloadItemsAtIndexPaths:indexPathsArr];
+    
+    [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
 }
 
 

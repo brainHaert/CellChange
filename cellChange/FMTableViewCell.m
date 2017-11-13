@@ -38,6 +38,13 @@
     _label.text = [NSString stringWithFormat:@"grow up %zd",indexPath.row];
 }
 
+- (void)layoutSubviews {
+    
+    [super layoutSubviews];
+    
+    _label.frame = self.bounds;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

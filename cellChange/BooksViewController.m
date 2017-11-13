@@ -102,9 +102,11 @@
     
     [_tableView reloadRowsAtIndexPaths:indexPathsArr withRowAnimation:UITableViewRowAnimationAutomatic];
     
+    [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 8;
+    return 18;
 }
 
 -(void)trunToOtherView{
